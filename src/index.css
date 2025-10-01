@@ -12,7 +12,7 @@
   }
 
   h1, h2, h3, h4, .font-heading {
-    @apply font-heading;
+    font-family: theme('fontFamily.heading');
   }
 }
 
