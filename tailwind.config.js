@@ -33,9 +33,11 @@ export default {
         }
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['Open Sans', 'system-ui', 'sans-serif'],
+        heading: ['Montserrat', 'system-ui', 'sans-serif'],
       },
     },
   },
   plugins: [],
 }
+

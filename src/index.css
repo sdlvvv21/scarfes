@@ -4,11 +4,15 @@
 
 @layer base {
   html {
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: 'Open Sans', system-ui, sans-serif;
   }
   
   body {
     @apply bg-white text-gray-900;
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    @apply font-heading;
   }
 }
 
@@ -37,3 +41,5 @@
     @apply card hover:shadow-md transition-shadow duration-200 cursor-pointer;
   }
 }
+
+

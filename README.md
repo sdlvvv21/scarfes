@@ -153,3 +153,5 @@ The application is designed to be easily integrated with a backend API:
 ## License
 
 This project is licensed under the MIT License.
+
+

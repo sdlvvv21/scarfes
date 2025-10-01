@@ -15,11 +15,11 @@ const CartItem = ({ item }) => {
   };
 
   return (
-    <div className="flex items-center gap-4 p-4 border-b border-gray-200">
+    <div className="card p-4 flex items-center gap-4">
       <img
         src={item.image}
         alt={item.name}
-        className="w-16 h-16 object-cover rounded-lg"
+        className="w-20 h-20 object-cover rounded-lg"
       />
       
       <div className="flex-1">
@@ -65,3 +65,5 @@ const CartItem = ({ item }) => {
 };
 
 export default CartItem;
+
+

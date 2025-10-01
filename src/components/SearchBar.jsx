@@ -51,3 +51,5 @@ const SearchBar = ({ placeholder = "Search scarves...", className = "" }) => {
 };
 
 export default SearchBar;
+
+

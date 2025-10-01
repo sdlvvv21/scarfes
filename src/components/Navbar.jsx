@@ -23,7 +23,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <span className="text-2xl font-bold text-primary-800">Scarfes</span>
+            <span className="text-2xl font-bold text-primary-800 font-heading">Scarfes</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -124,8 +124,10 @@ const Navbar = () => {
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="p-2 text-gray-700 hover:text-primary-800 transition-colors duration-200"
+              aria-label="Toggle menu"
+              aria-expanded={isMenuOpen}
             >
-              {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
@@ -137,75 +139,52 @@ const Navbar = () => {
           </div>
         )}
 
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200">
-            <div className="flex flex-col space-y-4">
-              <Link
-                to="/"
-                className="text-gray-700 hover:text-primary-800 transition-colors duration-200"
+        {/* Mobile Slide-in Menu */}
+        <div className={`md:hidden fixed inset-0 z-40 ${isMenuOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}>
+          {/* Overlay */}
+          <div
+            className={`absolute inset-0 bg-black transition-opacity duration-300 ${isMenuOpen ? 'opacity-40' : 'opacity-0'}`}
+            onClick={() => setIsMenuOpen(false)}
+          />
+          {/* Drawer */}
+          <div
+            className={`absolute top-0 right-0 h-full w-72 max-w-[85%] bg-white shadow-xl border-l border-gray-200 transform transition-transform duration-300 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
+            role="dialog"
+            aria-modal="true"
+          >
+            <div className="p-4 border-b border-gray-200 flex items-center justify-between">
+              <span className="text-lg font-semibold">Menu</span>
+              <button
                 onClick={() => setIsMenuOpen(false)}
+                className="p-2 text-gray-700 hover:text-primary-800 transition-colors duration-200"
+                aria-label="Close menu"
               >
-                Home
-              </Link>
-              <Link
-                to="/shop"
-                className="text-gray-700 hover:text-primary-800 transition-colors duration-200"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Shop
-              </Link>
-              <Link
-                to="/about"
-                className="text-gray-700 hover:text-primary-800 transition-colors duration-200"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                About
-              </Link>
-              
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+            <div className="p-4 flex flex-col space-y-4">
+              <Link to="/" className="text-gray-700 hover:text-primary-800 transition-colors duration-200" onClick={() => setIsMenuOpen(false)}>Home</Link>
+              <Link to="/shop" className="text-gray-700 hover:text-primary-800 transition-colors duration-200" onClick={() => setIsMenuOpen(false)}>Shop</Link>
+              <Link to="/about" className="text-gray-700 hover:text-primary-800 transition-colors duration-200" onClick={() => setIsMenuOpen(false)}>About</Link>
               {isAuthenticated ? (
                 <>
-                  <Link
-                    to="/orders"
-                    className="text-gray-700 hover:text-primary-800 transition-colors duration-200"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    My Orders
-                  </Link>
-                  <button
-                    onClick={() => {
-                      handleLogout();
-                      setIsMenuOpen(false);
-                    }}
-                    className="text-left text-gray-700 hover:text-primary-800 transition-colors duration-200"
-                  >
-                    Logout
-                  </button>
+                  <Link to="/orders" className="text-gray-700 hover:text-primary-800 transition-colors duration-200" onClick={() => setIsMenuOpen(false)}>My Orders</Link>
+                  <button onClick={() => { handleLogout(); setIsMenuOpen(false); }} className="text-left text-gray-700 hover:text-primary-800 transition-colors duration-200">Logout</button>
                 </>
               ) : (
                 <>
-                  <Link
-                    to="/login"
-                    className="text-gray-700 hover:text-primary-800 transition-colors duration-200"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    Login
-                  </Link>
-                  <Link
-                    to="/signup"
-                    className="text-gray-700 hover:text-primary-800 transition-colors duration-200"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    Sign Up
-                  </Link>
+                  <Link to="/login" className="text-gray-700 hover:text-primary-800 transition-colors duration-200" onClick={() => setIsMenuOpen(false)}>Login</Link>
+                  <Link to="/signup" className="bg-primary-800 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors duration-200" onClick={() => setIsMenuOpen(false)}>Sign Up</Link>
                 </>
               )}
             </div>
           </div>
-        )}
+        </div>
       </div>
     </nav>
   );
 };
 
 export default Navbar;
+
+

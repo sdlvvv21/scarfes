@@ -43,7 +43,7 @@ const Cart = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pb-24 md:pb-0">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <div className="flex items-center gap-4 mb-8">
@@ -122,7 +122,7 @@ const Cart = () => {
 
               <Button
                 onClick={handleCheckout}
-                className="w-full mb-4"
+                className="w-full mb-4 hidden md:block"
                 size="lg"
               >
                 {isAuthenticated ? 'Proceed to Checkout' : 'Login to Checkout'}
@@ -138,8 +138,19 @@ const Cart = () => {
           </div>
         </div>
       </div>
+
+      {/* Mobile Checkout Bar */}
+      <div className="fixed md:hidden bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 z-40">
+        <div className="max-w-7xl mx-auto">
+          <Button onClick={handleCheckout} className="w-full" size="lg">
+            {isAuthenticated ? 'Proceed to Checkout' : 'Login to Checkout'}
+          </Button>
+        </div>
+      </div>
     </div>
   );
 };
 
 export default Cart;
+
+

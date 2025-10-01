@@ -84,3 +84,5 @@ export const validateEmail = (email) => {
 export const validatePassword = (password) => {
   return password.length >= 6;
 };
+
+

@@ -15,15 +15,15 @@ const ProductCard = ({ product, showAddToCart = true }) => {
   };
 
   return (
-    <Link to={`/product/${product.id}`} className="product-card group">
-      <div className="relative">
+    <Link to={`/product/${product.id}`} className="product-card group rounded-xl overflow-hidden">
+      <div className="relative overflow-hidden">
         <img
           src={product.image}
           alt={product.name}
-          className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+          className="w-full h-64 object-cover transition-transform duration-300 ease-out group-hover:scale-105"
         />
         {discount > 0 && (
-          <div className="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 rounded text-sm font-medium">
+          <div className="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 rounded text-sm font-medium shadow">
             -{discount}%
           </div>
         )}
@@ -32,11 +32,11 @@ const ProductCard = ({ product, showAddToCart = true }) => {
         </button>
       </div>
       
-      <div className="p-4">
-        <h3 className="font-medium text-gray-900 mb-2 line-clamp-2">{product.name}</h3>
+      <div className="p-5">
+        <h3 className="font-bold text-gray-900 mb-2 line-clamp-2 font-heading text-lg">{product.name}</h3>
         
         <div className="flex items-center gap-2 mb-2">
-          <span className="text-lg font-semibold text-primary-800">
+          <span className="text-base md:text-lg font-semibold text-primary-800">
             {formatPrice(product.price)}
           </span>
           {product.originalPrice && (
@@ -64,7 +64,7 @@ const ProductCard = ({ product, showAddToCart = true }) => {
         {showAddToCart && (
           <button
             onClick={handleAddToCart}
-            className="w-full flex items-center justify-center gap-2 bg-primary-800 text-white py-2 px-4 rounded-lg hover:bg-primary-700 transition-colors duration-200"
+            className="w-full flex items-center justify-center gap-2 bg-primary-800 text-white py-2.5 px-4 rounded-lg hover:bg-primary-700 transition-colors duration-200"
           >
             <ShoppingCart className="w-4 h-4" />
             Add to Cart
@@ -76,3 +76,5 @@ const ProductCard = ({ product, showAddToCart = true }) => {
 };
 
 export default ProductCard;
+
+
