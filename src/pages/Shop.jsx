@@ -25,7 +25,7 @@ const Shop = () => {
     <PageTransition className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
-        <div className="mb-8">
+        <div className="mb-8" data-aos="fade-up">
           <h1 className="text-3xl font-bold text-gray-900 mb-4">Shop Scarves</h1>
           <p className="text-gray-600 mb-6">
             Discover our premium collection of scarves, shawls, and wraps
@@ -68,7 +68,7 @@ const Shop = () => {
 
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Sidebar Filters - Desktop */}
-          <div className="hidden lg:block w-64 flex-shrink-0">
+          <div className="hidden lg:block w-64 flex-shrink-0" data-aos="fade-right">
             <FilterPanel />
           </div>
 
@@ -108,12 +108,13 @@ const Shop = () => {
                   ? 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6'
                   : 'space-y-4'
               }>
-                {filteredProducts.map((product) => (
-                  <ProductCard
-                    key={product.id}
-                    product={product}
-                    className={viewMode === 'list' ? 'flex flex-row' : ''}
-                  />
+                {filteredProducts.map((product, idx) => (
+                  <div key={product.id} data-aos="fade-up" data-aos-delay={idx * 50}>
+                    <ProductCard
+                      product={product}
+                      className={viewMode === 'list' ? 'flex flex-row' : ''}
+                    />
+                  </div>
                 ))}
               </div>
             ) : (

@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { CartProvider } from './contexts/CartContext';
 import { AuthProvider } from './contexts/AuthContext';
@@ -16,6 +18,14 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 600,
+      easing: 'ease-out-quart',
+      offset: 80,
+      once: true,
+    });
+  }, []);
   return (
     <Router>
       <AuthProvider>

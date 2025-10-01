@@ -15,7 +15,7 @@ const ProductCard = ({ product, showAddToCart = true }) => {
   };
 
   return (
-    <Link to={`/product/${product.id}`} className="product-card group rounded-xl overflow-hidden">
+    <Link to={`/product/${product.id}`} className="product-card group rounded-xl overflow-hidden" data-aos="fade-up">
       <div className="relative overflow-hidden">
         <img
           src={product.image}

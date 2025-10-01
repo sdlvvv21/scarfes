@@ -14,7 +14,7 @@ const Home = () => {
       <section className="relative bg-gradient-to-r from-primary-800 to-primary-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
+            <div data-aos="fade-up">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Premium Scarves for Every Occasion
               </h1>
@@ -38,7 +38,7 @@ const Home = () => {
                 </Link>
               </div>
             </div>
-            <div className="relative">
+            <div className="relative" data-aos="fade-left">
               <img
                 src="https://images.unsplash.com/photo-1601925260369-0b0b0b0b0b0b?w=600&h=600&fit=crop"
                 alt="Luxury scarves"
@@ -50,7 +50,7 @@ const Home = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-50" data-aos="fade-up">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
@@ -81,18 +81,20 @@ const Home = () => {
       {/* Featured Products */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12" data-aos="fade-up">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Featured Products</h2>
             <p className="text-xl text-gray-600">Handpicked favorites from our collection</p>
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {featuredProducts.map((product) => (
-              <ProductCard key={product.id} product={product} />
+            {featuredProducts.map((product, idx) => (
+              <div key={product.id} data-aos="fade-up" data-aos-delay={idx * 75}>
+                <ProductCard product={product} />
+              </div>
             ))}
           </div>
           
-          <div className="text-center mt-12">
+          <div className="text-center mt-12" data-aos="fade-up" data-aos-delay="150">
             <Link
               to="/shop"
               className="inline-flex items-center bg-primary-800 text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-700 transition-colors duration-200"
@@ -107,7 +109,7 @@ const Home = () => {
       {/* Testimonials */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12" data-aos="fade-up">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">What Our Customers Say</h2>
             <p className="text-xl text-gray-600">Real reviews from satisfied customers</p>
           </div>
@@ -130,7 +132,7 @@ const Home = () => {
                 text: "Great customer service and the product exceeded my expectations. Will definitely order again!"
               }
             ].map((testimonial, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
+              <div key={index} className="bg-white p-6 rounded-lg shadow-sm" data-aos="fade-up" data-aos-delay={index * 100}>
                 <div className="flex text-yellow-400 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 fill-current" />
@@ -145,7 +147,7 @@ const Home = () => {
       </section>
 
       {/* Newsletter */}
-      <section className="py-16 bg-primary-800 text-white">
+      <section className="py-16 bg-primary-800 text-white" data-aos="fade-up">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Stay Updated</h2>
           <p className="text-xl text-primary-100 mb-8">

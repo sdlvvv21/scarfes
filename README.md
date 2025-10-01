@@ -94,6 +94,30 @@ src/
 - **Lucide React** - Icon library
 - **Vite** - Build tool and dev server
 
+## Assets: Where to store images and how to reference them
+
+You can store images in either location depending on your need:
+
+1) Public assets (recommended for product images)
+- Put files in `public/images/...`
+- Refer with absolute URL from root at runtime (no import needed):
+  - In JSX: `<img src="/images/scarves/silk-rose.jpg" alt="Silk Rose" />`
+  - In data files like `src/data/products.js`: `image: "/images/scarves/silk-rose.jpg"`
+- Pros: URL remains stable, no bundling overhead, easy to update without code changes.
+
+2) Imported assets (use for component-specific graphics)
+- Put files in `src/assets/...`
+- Import and use in components:
+  ```jsx
+  import heroImg from '../assets/hero/banner.png'
+  <img src={heroImg} alt="Banner" />
+  ```
+- Pros: Hashed filenames for cache-busting in builds; tree-shaken if unused.
+
+Notes
+- For dynamic product catalogs, prefer `public/images` so `src/data/products.js` can point to plain paths.
+- When deploying, make sure the `public/` folder is included so URLs like `/images/...` resolve.
+
 ## Features Overview
 
 ### Shopping Experience
@@ -153,5 +177,7 @@ The application is designed to be easily integrated with a backend API:
 ## License
 
 This project is licensed under the MIT License.
+
+
 
 
