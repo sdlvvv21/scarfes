@@ -1,0 +1,211 @@
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { ShoppingCart, User, Menu, X, Search } from 'lucide-react';
+import { useCart } from '../contexts/CartContext';
+import { useAuth } from '../contexts/AuthContext';
+import SearchBar from './SearchBar';
+
+const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const { getTotalItems } = useCart();
+  const { isAuthenticated, user, logout } = useAuth();
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    logout();
+    navigate('/');
+  };
+
+  return (
+    <nav className="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <Link to="/" className="flex items-center">
+            <span className="text-2xl font-bold text-primary-800">Scarfes</span>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            <Link to="/" className="text-gray-700 hover:text-primary-800 transition-colors duration-200">
+              Home
+            </Link>
+            <Link to="/shop" className="text-gray-700 hover:text-primary-800 transition-colors duration-200">
+              Shop
+            </Link>
+            <Link to="/about" className="text-gray-700 hover:text-primary-800 transition-colors duration-200">
+              About
+            </Link>
+          </div>
+
+          {/* Desktop Actions */}
+          <div className="hidden md:flex items-center space-x-4">
+            {/* Search */}
+            <button
+              onClick={() => setIsSearchOpen(!isSearchOpen)}
+              className="p-2 text-gray-700 hover:text-primary-800 transition-colors duration-200"
+            >
+              <Search className="w-5 h-5" />
+            </button>
+
+            {/* Cart */}
+            <Link
+              to="/cart"
+              className="relative p-2 text-gray-700 hover:text-primary-800 transition-colors duration-200"
+            >
+              <ShoppingCart className="w-5 h-5" />
+              {getTotalItems() > 0 && (
+                <span className="absolute -top-1 -right-1 bg-primary-800 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                  {getTotalItems()}
+                </span>
+              )}
+            </Link>
+
+            {/* User Menu */}
+            {isAuthenticated ? (
+              <div className="relative group">
+                <button className="flex items-center space-x-2 p-2 text-gray-700 hover:text-primary-800 transition-colors duration-200">
+                  <User className="w-5 h-5" />
+                  <span className="text-sm">{user?.name}</span>
+                </button>
+                <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                  <Link
+                    to="/orders"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"
+                  >
+                    My Orders
+                  </Link>
+                  <button
+                    onClick={handleLogout}
+                    className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"
+                  >
+                    Logout
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <div className="flex items-center space-x-2">
+                <Link
+                  to="/login"
+                  className="text-gray-700 hover:text-primary-800 transition-colors duration-200"
+                >
+                  Login
+                </Link>
+                <Link
+                  to="/signup"
+                  className="bg-primary-800 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors duration-200"
+                >
+                  Sign Up
+                </Link>
+              </div>
+            )}
+          </div>
+
+          {/* Mobile Menu Button */}
+          <div className="md:hidden flex items-center space-x-2">
+            <button
+              onClick={() => setIsSearchOpen(!isSearchOpen)}
+              className="p-2 text-gray-700 hover:text-primary-800 transition-colors duration-200"
+            >
+              <Search className="w-5 h-5" />
+            </button>
+            <Link
+              to="/cart"
+              className="relative p-2 text-gray-700 hover:text-primary-800 transition-colors duration-200"
+            >
+              <ShoppingCart className="w-5 h-5" />
+              {getTotalItems() > 0 && (
+                <span className="absolute -top-1 -right-1 bg-primary-800 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                  {getTotalItems()}
+                </span>
+              )}
+            </Link>
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="p-2 text-gray-700 hover:text-primary-800 transition-colors duration-200"
+            >
+              {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Search */}
+        {isSearchOpen && (
+          <div className="md:hidden py-4 border-t border-gray-200">
+            <SearchBar />
+          </div>
+        )}
+
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div className="md:hidden py-4 border-t border-gray-200">
+            <div className="flex flex-col space-y-4">
+              <Link
+                to="/"
+                className="text-gray-700 hover:text-primary-800 transition-colors duration-200"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Home
+              </Link>
+              <Link
+                to="/shop"
+                className="text-gray-700 hover:text-primary-800 transition-colors duration-200"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Shop
+              </Link>
+              <Link
+                to="/about"
+                className="text-gray-700 hover:text-primary-800 transition-colors duration-200"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                About
+              </Link>
+              
+              {isAuthenticated ? (
+                <>
+                  <Link
+                    to="/orders"
+                    className="text-gray-700 hover:text-primary-800 transition-colors duration-200"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    My Orders
+                  </Link>
+                  <button
+                    onClick={() => {
+                      handleLogout();
+                      setIsMenuOpen(false);
+                    }}
+                    className="text-left text-gray-700 hover:text-primary-800 transition-colors duration-200"
+                  >
+                    Logout
+                  </button>
+                </>
+              ) : (
+                <>
+                  <Link
+                    to="/login"
+                    className="text-gray-700 hover:text-primary-800 transition-colors duration-200"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Login
+                  </Link>
+                  <Link
+                    to="/signup"
+                    className="text-gray-700 hover:text-primary-800 transition-colors duration-200"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Sign Up
+                  </Link>
+                </>
+              )}
+            </div>
+          </div>
+        )}
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
