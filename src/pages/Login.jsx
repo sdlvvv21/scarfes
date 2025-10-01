@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PageTransition from '../components/PageTransition';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { validateEmail, validatePassword } from '../utils/helpers';
@@ -82,7 +83,7 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+    <PageTransition className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <div className="text-center">
           <h2 className="text-3xl font-bold text-primary-800 mb-2">Scarfes</h2>
@@ -230,7 +231,7 @@ const Login = () => {
           </div>
         </div>
       </div>
-    </div>
+    </PageTransition>
   );
 };
 

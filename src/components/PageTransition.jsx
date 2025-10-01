@@ -1,28 +1,24 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect, useState } from 'react';
 
-const variants = {
-  initial: { opacity: 0, y: 12 },
-  animate: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: -12 }
-};
+const PageTransition = ({ children, className = '' }) => {
+  const [isVisible, setIsVisible] = useState(false);
 
-const transition = { duration: 0.25, ease: 'easeOut' };
+  useEffect(() => {
+    const id = requestAnimationFrame(() => setIsVisible(true));
+    return () => cancelAnimationFrame(id);
+  }, []);
 
-const PageTransition = ({ children }) => {
   return (
-    <motion.div
-      initial="initial"
-      animate="animate"
-      exit="exit"
-      variants={variants}
-      transition={transition}
+    <div
+      className={`${className} transform transition-all duration-500 ease-out ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'
+      }`}
     >
       {children}
-    </motion.div>
+    </div>
   );
 };
 
 export default PageTransition;
 
-
+ 

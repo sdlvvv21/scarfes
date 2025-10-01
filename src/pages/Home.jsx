@@ -1,4 +1,5 @@
 import React from 'react';
+import PageTransition from '../components/PageTransition';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Star, Truck, Shield, RotateCcw } from 'lucide-react';
 import ProductCard from '../components/ProductCard';
@@ -8,7 +9,7 @@ const Home = () => {
   const featuredProducts = products.filter(product => product.featured);
 
   return (
-    <div className="min-h-screen">
+    <PageTransition className="min-h-screen">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-primary-800 to-primary-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -162,7 +163,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-    </div>
+    </PageTransition>
   );
 };
 
