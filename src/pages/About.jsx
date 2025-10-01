@@ -1,9 +1,10 @@
 import React from 'react';
+import PageTransition from '../components/PageTransition';
 import { Award, Users, Globe, Heart } from 'lucide-react';
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <PageTransition className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-primary-800 to-primary-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -177,7 +178,7 @@ const About = () => {
           </div>
         </div>
       </section>
-    </div>
+    </PageTransition>
   );
 };
 
