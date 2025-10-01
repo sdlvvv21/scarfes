@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PageTransition from '../components/PageTransition';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Heart, Share2, Star, Truck, Shield, RotateCcw } from 'lucide-react';
 import { useCart } from '../contexts/CartContext';
@@ -38,7 +39,7 @@ const ProductDetail = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <PageTransition className="min-h-screen bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Breadcrumb */}
         <nav className="mb-8">
@@ -215,7 +216,7 @@ const ProductDetail = () => {
           </section>
         )}
       </div>
-    </div>
+    </PageTransition>
   );
 };
 
