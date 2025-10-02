@@ -38,7 +38,7 @@ const Home = () => {
                 </Link>
               </div>
             </div>
-            <div className="relative" data-aos="fade-left">
+            <div className="relative h-96" data-aos="fade-left">
               <img
                 src="/headscarf.jpg "
                 alt="Luxury scarves"
