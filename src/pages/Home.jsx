@@ -11,40 +11,34 @@ const Home = () => {
   return (
     <PageTransition className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-primary-800 to-primary-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div data-aos="fade-up">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Premium Scarves for Every Occasion
-              </h1>
-              <p className="text-xl text-primary-100 mb-8">
-                Discover our curated collection of luxury scarves, shawls, and wraps. 
-                From silk elegance to cashmere warmth, find your perfect style.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  to="/shop"
-                  className="inline-flex items-center justify-center bg-white text-primary-800 px-8 py-4 rounded-lg font-semibold hover:bg-primary-50 transition-colors duration-200"
-                >
-                  Shop Now
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
-                <Link
-                  to="/about"
-                  className="inline-flex items-center justify-center border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-800 transition-colors duration-200"
-                >
-                  Learn More
-                </Link>
-              </div>
-            </div>
-            <div className="relative h-96" data-aos="fade-left">
-              <img
-                src="/headscarf.jpg "
-                alt="Luxury scarves"
-                className="w-full h-full object-cover rounded-lg shadow-2xl"
-              />
-            </div>
+      <section 
+        className="relative bg-cover bg-center bg-no-repeat min-h-[600px] flex items-center"
+        style={{ backgroundImage: "url('/headscarf.jpg')" }}
+      >
+        {/* Gradient overlay for readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-900/80 to-primary-600/40"></div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Premium Scarves for Every Occasion
+          </h1>
+          <p className="text-xl text-primary-100 mb-8 max-w-2xl">
+            Discover our curated collection of luxury scarves, shawls, and wraps. 
+            From silk elegance to cashmere warmth, find your perfect style.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link
+              to="/shop"
+              className="inline-flex items-center justify-center bg-white text-primary-800 px-8 py-4 rounded-lg font-semibold hover:bg-primary-50 transition-colors duration-200"
+            >
+              Shop Now <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
+            <Link
+              to="/about"
+              className="inline-flex items-center justify-center border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-800 transition-colors duration-200"
+            >
+              Learn More
+            </Link>
           </div>
         </div>
       </section>
@@ -99,8 +93,7 @@ const Home = () => {
               to="/shop"
               className="inline-flex items-center bg-primary-800 text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-700 transition-colors duration-200"
             >
-              View All Products
-              <ArrowRight className="ml-2 w-5 h-5" />
+              View All Products <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
           </div>
         </div>
@@ -170,5 +163,3 @@ const Home = () => {
 };
 
 export default Home;
-
-
