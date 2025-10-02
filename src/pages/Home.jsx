@@ -40,7 +40,7 @@ const Home = () => {
             </div>
             <div className="relative" data-aos="fade-left">
               <img
-                src="https://images.unsplash.com/photo-1601925260369-0b0b0b0b0b0b?w=600&h=600&fit=crop"
+                src="/headscarf.jpg w=600&h=600&fit=crop"
                 alt="Luxury scarves"
                 className="rounded-lg shadow-2xl"
               />
