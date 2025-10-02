@@ -42,7 +42,7 @@ const Home = () => {
               <img
                 src="/headscarf.jpg "
                 alt="Luxury scarves"
-                className="rounded-lg shadow-2xl"
+                className="w-full h-full object-cover rounded-lg shadow-2xl"
               />
             </div>
           </div>
