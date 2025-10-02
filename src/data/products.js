@@ -4,10 +4,10 @@ export const products = [
     name: "Silk Elegance Scarf",
     price: 89.99,
     originalPrice: 120.00,
-    image: "https://www.pinterest.com/pin/97742254400524435",
+    image: "https://pin.it/4dVgTnO3T",
     images: [
-      "https://www.pinterest.com/pin/97742254400524435",
-      "https://www.pinterest.com/pin/97742254400524435"
+      "https://pin.it/4dVgTnO3T",
+      "https://pin.it/4dVgTnO3T"
     ],
     category: "silk",
     color: "navy",
@@ -23,9 +23,9 @@ export const products = [
     name: "Cashmere Winter Wrap",
     price: 149.99,
     originalPrice: 199.00,
-    image: "https://www.pinterest.com/pin/181621797464651002",
+    image: "https://pin.it/8UDhMW3WN",
     images: [
-      "https://www.pinterest.com/pin/181621797464651002"
+      "https://pin.it/8UDhMW3WN"
     ],
     category: "cashmere",
     color: "gray",
@@ -41,9 +41,9 @@ export const products = [
     name: "Floral Print Scarf",
     price: 45.99,
     originalPrice: 65.00,
-    image: "https://www.pinterest.com/pin/401453754302576616",
+    image: "https://pin.it/3T0KUvKio",
     images: [
-      "https://www.pinterest.com/pin/401453754302576616"
+      "https://pin.it/3T0KUvKio"
     ],
     category: "cotton",
     color: "multicolor",
@@ -59,9 +59,9 @@ export const products = [
     name: "Luxury Pashmina Shawl",
     price: 199.99,
     originalPrice: 299.00,
-    image: "https://www.pinterest.com/pin/15762667442247055",
+    image: "https://pin.it/6ZF2FoMai",
     images: [
-      "https://www.pinterest.com/pin/15762667442247055"
+      "https://pin.it/6ZF2FoMai"
     ],
     category: "pashmina",
     color: "cream",
@@ -77,9 +77,9 @@ export const products = [
     name: "Geometric Pattern Scarf",
     price: 65.99,
     originalPrice: 85.00,
-    image: "https://www.pinterest.com/pin/385761524359760769",
+    image: "https://pin.it/SG6HiC7LQ",
     images: [
-      "https://www.pinterest.com/pin/385761524359760769"
+      "https://pin.it/SG6HiC7LQ"
     ],
     category: "polyester",
     color: "black",
@@ -95,9 +95,9 @@ export const products = [
     name: "Vintage Style Scarf",
     price: 75.99,
     originalPrice: 95.00,
-    image: "https://www.pinterest.com/pin/54113633027177641",
+    image: "https://pin.it/Mybe3qBpx",
     images: [
-      "https://www.pinterest.com/pin/54113633027177641"
+      "https://pin.it/Mybe3qBpx"
     ],
     category: "wool",
     color: "burgundy",
@@ -113,9 +113,9 @@ export const products = [
     name: "Lightweight Summer Scarf",
     price: 35.99,
     originalPrice: 50.00,
-    image: "https://www.pinterest.com/pin/1046453663408190296",
+    image: "https://pin.it/2CsA6eviq",
     images: [
-      "https://www.pinterest.com/pin/1046453663408190296"
+      "https://pin.it/2CsA6eviq"
     ],
     category: "linen",
     color: "white",
@@ -131,9 +131,9 @@ export const products = [
     name: "Embroidered Silk Scarf",
     price: 125.99,
     originalPrice: 150.00,
-    image: "https://www.pinterest.com/pin/237353842854159797",
+    image: "https://pin.it/4DD0TTTSG",
     images: [
-      "https://www.pinterest.com/pin/237353842854159797"
+      "https://pin.it/4DD0TTTSG"
     ],
     category: "silk",
     color: "emerald",
