@@ -4,10 +4,10 @@ export const products = [
     name: "Silk Elegance Scarf",
     price: 89.99,
     originalPrice: 120.00,
-    image: "https://images.unsplash.com/photo-1518230651651-1cda1b67c9b6?w=800&h=800&fit=crop&auto=format&q=80",
+    image: "https://pin.it/4dVgTnO3T",
     images: [
-      "https://images.unsplash.com/photo-1518230651651-1cda1b67c9b6?w=800&h=800&fit=crop&auto=format&q=80",
-      "https://images.unsplash.com/photo-1519750157634-b6d493a0f77c?w=800&h=800&fit=crop&auto=format&q=80"
+      "https://pin.it/4dVgTnO3T",
+      "https://pin.it/4dVgTnO3T"
     ],
     category: "silk",
     color: "navy",
@@ -23,9 +23,9 @@ export const products = [
     name: "Cashmere Winter Wrap",
     price: 149.99,
     originalPrice: 199.00,
-    image: "https://images.unsplash.com/photo-1517451330947-7809dead78d9?w=800&h=800&fit=crop&auto=format&q=80",
+    image: "https://pin.it/8UDhMW3WN",
     images: [
-      "https://images.unsplash.com/photo-1517451330947-7809dead78d9?w=800&h=800&fit=crop&auto=format&q=80"
+      "https://pin.it/8UDhMW3WN"
     ],
     category: "cashmere",
     color: "gray",
@@ -41,9 +41,9 @@ export const products = [
     name: "Floral Print Scarf",
     price: 45.99,
     originalPrice: 65.00,
-    image: "https://images.unsplash.com/photo-1520975829216-87470b373ccc?w=800&h=800&fit=crop&auto=format&q=80",
+    image: "https://pin.it/3T0KUvKio",
     images: [
-      "https://images.unsplash.com/photo-1520975829216-87470b373ccc?w=800&h=800&fit=crop&auto=format&q=80"
+      "https://pin.it/3T0KUvKio"
     ],
     category: "cotton",
     color: "multicolor",
@@ -59,9 +59,9 @@ export const products = [
     name: "Luxury Pashmina Shawl",
     price: 199.99,
     originalPrice: 299.00,
-    image: "https://images.unsplash.com/photo-1520975782036-6f8f6b1c06b3?w=800&h=800&fit=crop&auto=format&q=80",
+    image: "https://pin.it/6ZF2FoMai",
     images: [
-      "https://images.unsplash.com/photo-1520975782036-6f8f6b1c06b3?w=800&h=800&fit=crop&auto=format&q=80"
+      "https://pin.it/6ZF2FoMai"
     ],
     category: "pashmina",
     color: "cream",
@@ -77,9 +77,9 @@ export const products = [
     name: "Geometric Pattern Scarf",
     price: 65.99,
     originalPrice: 85.00,
-    image: "https://images.unsplash.com/photo-1515542706656-8e6ef17a1521?w=800&h=800&fit=crop&auto=format&q=80",
+    image: "https://pin.it/SG6HiC7LQ",
     images: [
-      "https://images.unsplash.com/photo-1515542706656-8e6ef17a1521?w=800&h=800&fit=crop&auto=format&q=80"
+      "https://pin.it/SG6HiC7LQ"
     ],
     category: "polyester",
     color: "black",
@@ -95,9 +95,9 @@ export const products = [
     name: "Vintage Style Scarf",
     price: 75.99,
     originalPrice: 95.00,
-    image: "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=800&h=800&fit=crop&auto=format&q=80",
+    image: "https://pin.it/Mybe3qBpx",
     images: [
-      "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=800&h=800&fit=crop&auto=format&q=80"
+      "https://pin.it/Mybe3qBpx"
     ],
     category: "wool",
     color: "burgundy",
@@ -113,9 +113,9 @@ export const products = [
     name: "Lightweight Summer Scarf",
     price: 35.99,
     originalPrice: 50.00,
-    image: "https://images.unsplash.com/photo-1606036573937-43aecd0ed6a5?w=800&h=800&fit=crop&auto=format&q=80",
+    image: "https://pin.it/2CsA6eviq",
     images: [
-      "https://images.unsplash.com/photo-1606036573937-43aecd0ed6a5?w=800&h=800&fit=crop&auto=format&q=80"
+      "https://pin.it/2CsA6eviq"
     ],
     category: "linen",
     color: "white",
@@ -131,9 +131,9 @@ export const products = [
     name: "Embroidered Silk Scarf",
     price: 125.99,
     originalPrice: 150.00,
-    image: "https://images.unsplash.com/photo-1601925260369-0b0b0b0b0b0b?w=400&h=400&fit=crop",
+    image: "https://pin.it/4DD0TTTSG",
     images: [
-      "https://images.unsplash.com/photo-1601925260369-0b0b0b0b0b0b?w=400&h=400&fit=crop"
+      "https://pin.it/4DD0TTTSG"
     ],
     category: "silk",
     color: "emerald",
