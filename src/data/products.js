@@ -4,10 +4,10 @@ export const products = [
     name: "Silk Elegance Scarf",
     price: 89.99,
     originalPrice: 120.00,
-    image: "https://pin.it/4dVgTnO3T",
+    image: "/photo1.jpg",
     images: [
-      "https://pin.it/4dVgTnO3T",
-      "https://pin.it/4dVgTnO3T"
+      "/photo1.jpg",
+      "/photo1.jpg"
     ],
     category: "silk",
     color: "navy",
@@ -23,9 +23,9 @@ export const products = [
     name: "Cashmere Winter Wrap",
     price: 149.99,
     originalPrice: 199.00,
-    image: "https://pin.it/8UDhMW3WN",
+    image: "/photo2.jpg",
     images: [
-      "https://pin.it/8UDhMW3WN"
+      "/photo2.jpg"
     ],
     category: "cashmere",
     color: "gray",
@@ -41,9 +41,9 @@ export const products = [
     name: "Floral Print Scarf",
     price: 45.99,
     originalPrice: 65.00,
-    image: "https://pin.it/3T0KUvKio",
+    image: "/photo3.jpg",
     images: [
-      "https://pin.it/3T0KUvKio"
+      "/photo3.jpg"
     ],
     category: "cotton",
     color: "multicolor",
@@ -59,9 +59,9 @@ export const products = [
     name: "Luxury Pashmina Shawl",
     price: 199.99,
     originalPrice: 299.00,
-    image: "https://pin.it/6ZF2FoMai",
+    image: "/photo4.jpg",
     images: [
-      "https://pin.it/6ZF2FoMai"
+      "/photo4.jpg"
     ],
     category: "pashmina",
     color: "cream",
@@ -77,9 +77,9 @@ export const products = [
     name: "Geometric Pattern Scarf",
     price: 65.99,
     originalPrice: 85.00,
-    image: "https://pin.it/SG6HiC7LQ",
+    image: "/photo5.jpg",
     images: [
-      "https://pin.it/SG6HiC7LQ"
+      "/photo5.jpg"
     ],
     category: "polyester",
     color: "black",
@@ -95,9 +95,9 @@ export const products = [
     name: "Vintage Style Scarf",
     price: 75.99,
     originalPrice: 95.00,
-    image: "https://pin.it/Mybe3qBpx",
+    image: "/photo6.jpg",
     images: [
-      "https://pin.it/Mybe3qBpx"
+      "/photo6.jpg"
     ],
     category: "wool",
     color: "burgundy",
@@ -113,9 +113,9 @@ export const products = [
     name: "Lightweight Summer Scarf",
     price: 35.99,
     originalPrice: 50.00,
-    image: "https://pin.it/2CsA6eviq",
+    image: "/photo7.jpg",
     images: [
-      "https://pin.it/2CsA6eviq"
+      "/photo7.jpg"
     ],
     category: "linen",
     color: "white",
@@ -131,9 +131,9 @@ export const products = [
     name: "Embroidered Silk Scarf",
     price: 125.99,
     originalPrice: 150.00,
-    image: "https://pin.it/4DD0TTTSG",
+    image: "/photo8.jpg",
     images: [
-      "https://pin.it/4DD0TTTSG"
+      "/photo8.jpg"
     ],
     category: "silk",
     color: "emerald",
