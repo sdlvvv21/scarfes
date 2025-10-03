@@ -176,6 +176,7 @@ const Navbar = () => {
               <Link to="/" className="text-gray-700 hover:text-primary-800 transition-colors duration-200" onClick={() => setIsMenuOpen(false)}>{t('navigation.home')}</Link>
               <Link to="/shop" className="text-gray-700 hover:text-primary-800 transition-colors duration-200" onClick={() => setIsMenuOpen(false)}>{t('navigation.shop')}</Link>
               <Link to="/about" className="text-gray-700 hover:text-primary-800 transition-colors duration-200" onClick={() => setIsMenuOpen(false)}>{t('navigation.about')}</Link>
+              <Link to="/contact" className="text-gray-700 hover:text-primary-800 transition-colors duration-200" onClick={() => setIsMenuOpen(false)}>{t('navigation.contact')}</Link>
               {isAuthenticated ? (
                 <>
                   <Link to="/orders" className="text-gray-700 hover:text-primary-800 transition-colors duration-200" onClick={() => setIsMenuOpen(false)}>{t('navigation.myOrders')}</Link>
@@ -196,5 +197,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-

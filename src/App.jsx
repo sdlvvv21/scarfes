@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import { CartProvider } from './contexts/CartContext';
 import { AuthProvider } from './contexts/AuthContext';
 import { FilterProvider } from './contexts/FilterContext';
@@ -10,6 +11,7 @@ import { LanguageProvider } from './contexts/LanguageContext';
 import './i18n';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+
 import Home from './pages/Home';
 import Shop from './pages/Shop';
 import ProductDetail from './pages/ProductDetail';
@@ -18,6 +20,7 @@ import Cart from './pages/Cart';
 import Orders from './pages/Orders';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import Contact from './pages/Contact'; // ✅ import Contact page
 
 function App() {
   useEffect(() => {
@@ -28,6 +31,7 @@ function App() {
       once: true,
     });
   }, []);
+
   return (
     <Router>
       <LanguageProvider>
@@ -47,6 +51,7 @@ function App() {
                       <Route path="/orders" element={<Orders />} />
                       <Route path="/login" element={<Login />} />
                       <Route path="/signup" element={<Signup />} />
+                      <Route path="/contact" element={<Contact />} />
                     </Routes>
                   </main>
                   <Footer />
@@ -61,5 +66,3 @@ function App() {
 }
 
 export default App;
-
-
