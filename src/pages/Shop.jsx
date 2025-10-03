@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import PageTransition from '../components/PageTransition';
 import { useSearch } from '../contexts/SearchContext';
 import { useFilter } from '../contexts/FilterContext';
@@ -10,6 +11,7 @@ import FilterPanel from '../components/FilterPanel';
 import { Grid, List, SlidersHorizontal } from 'lucide-react';
 
 const Shop = () => {
+  const { t } = useTranslation();
   const [viewMode, setViewMode] = useState('grid');
   const [showFilters, setShowFilters] = useState(false);
   const { query } = useSearch();
@@ -26,15 +28,15 @@ const Shop = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <div className="mb-8" data-aos="fade-up">
-          <h1 className="text-3xl font-bold text-gray-900 mb-4">Shop Scarves</h1>
+          <h1 className="text-3xl font-bold text-gray-900 mb-4">{t('shop.title')}</h1>
           <p className="text-gray-600 mb-6">
-            Discover our premium collection of scarves, shawls, and wraps
+            {t('shop.subtitle')}
           </p>
           
           {/* Search and Controls */}
           <div className="flex flex-col lg:flex-row gap-4 items-start lg:items-center justify-between">
             <div className="w-full lg:w-96">
-              <SearchBar placeholder="Search scarves..." />
+              <SearchBar placeholder={t('shop.searchPlaceholder')} />
             </div>
             
             <div className="flex items-center gap-4">
@@ -60,7 +62,7 @@ const Shop = () => {
                 className="lg:hidden flex items-center gap-2 bg-white px-4 py-2 rounded-lg border border-gray-300 hover:bg-gray-50"
               >
                 <SlidersHorizontal className="w-4 h-4" />
-                Filters
+                {t('shop.filters')}
               </button>
             </div>
           </div>
@@ -84,7 +86,7 @@ const Shop = () => {
             {/* Results Header */}
             <div className="flex items-center justify-between mb-6">
               <p className="text-gray-600">
-                Showing {filteredProducts.length} of {products.length} products
+                {t('shop.results', { count: filteredProducts.length, total: products.length })}
               </p>
               
               {/* Sort Dropdown */}
@@ -93,11 +95,11 @@ const Shop = () => {
                 onChange={(e) => useFilter().setSortBy(e.target.value)}
                 className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none"
               >
-                <option value="featured">Featured</option>
-                <option value="price-low">Price: Low to High</option>
-                <option value="price-high">Price: High to Low</option>
-                <option value="rating">Highest Rated</option>
-                <option value="newest">Newest</option>
+                <option value="featured">{t('shop.sortOptions.featured')}</option>
+                <option value="price-low">{t('shop.sortOptions.priceLow')}</option>
+                <option value="price-high">{t('shop.sortOptions.priceHigh')}</option>
+                <option value="rating">{t('shop.sortOptions.rating')}</option>
+                <option value="newest">{t('shop.sortOptions.newest')}</option>
               </select>
             </div>
 
@@ -124,9 +126,9 @@ const Shop = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-medium text-gray-900 mb-2">No products found</h3>
+                <h3 className="text-lg font-medium text-gray-900 mb-2">{t('shop.noResults.title')}</h3>
                 <p className="text-gray-600 mb-4">
-                  Try adjusting your search or filter criteria
+                  {t('shop.noResults.subtitle')}
                 </p>
                 <button
                   onClick={() => {
@@ -135,7 +137,7 @@ const Shop = () => {
                   }}
                   className="bg-primary-800 text-white px-6 py-2 rounded-lg hover:bg-primary-700 transition-colors duration-200"
                 >
-                  Clear Filters
+                  {t('shop.noResults.clearFilters')}
                 </button>
               </div>
             )}

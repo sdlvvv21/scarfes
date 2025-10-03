@@ -6,6 +6,8 @@ import { CartProvider } from './contexts/CartContext';
 import { AuthProvider } from './contexts/AuthContext';
 import { FilterProvider } from './contexts/FilterContext';
 import { SearchProvider } from './contexts/SearchContext';
+import { LanguageProvider } from './contexts/LanguageContext';
+import './i18n';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -28,30 +30,32 @@ function App() {
   }, []);
   return (
     <Router>
-      <AuthProvider>
-        <CartProvider>
-          <FilterProvider>
-            <SearchProvider>
-              <div className="min-h-screen flex flex-col">
-                <Navbar />
-                <main className="flex-1">
-                  <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/shop" element={<Shop />} />
-                    <Route path="/product/:id" element={<ProductDetail />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/cart" element={<Cart />} />
-                    <Route path="/orders" element={<Orders />} />
-                    <Route path="/login" element={<Login />} />
-                    <Route path="/signup" element={<Signup />} />
-                  </Routes>
-                </main>
-                <Footer />
-              </div>
-            </SearchProvider>
-          </FilterProvider>
-        </CartProvider>
-      </AuthProvider>
+      <LanguageProvider>
+        <AuthProvider>
+          <CartProvider>
+            <FilterProvider>
+              <SearchProvider>
+                <div className="min-h-screen flex flex-col">
+                  <Navbar />
+                  <main className="flex-1">
+                    <Routes>
+                      <Route path="/" element={<Home />} />
+                      <Route path="/shop" element={<Shop />} />
+                      <Route path="/product/:id" element={<ProductDetail />} />
+                      <Route path="/about" element={<About />} />
+                      <Route path="/cart" element={<Cart />} />
+                      <Route path="/orders" element={<Orders />} />
+                      <Route path="/login" element={<Login />} />
+                      <Route path="/signup" element={<Signup />} />
+                    </Routes>
+                  </main>
+                  <Footer />
+                </div>
+              </SearchProvider>
+            </FilterProvider>
+          </CartProvider>
+        </AuthProvider>
+      </LanguageProvider>
     </Router>
   );
 }

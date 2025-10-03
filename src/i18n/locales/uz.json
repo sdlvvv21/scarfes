@@ -1,0 +1,241 @@
+{
+  "common": {
+    "home": "Bosh sahifa",
+    "shop": "Do'kon",
+    "about": "Biz haqimizda",
+    "contact": "Aloqa",
+    "login": "Kirish",
+    "signup": "Ro'yxatdan o'tish",
+    "logout": "Chiqish",
+    "search": "Qidirish",
+    "cart": "Savatcha",
+    "orders": "Mening buyurtmalarim",
+    "menu": "Menyu",
+    "close": "Yopish",
+    "loading": "Yuklanmoqda...",
+    "error": "Xatolik",
+    "success": "Muvaffaqiyat",
+    "save": "Saqlash",
+    "cancel": "Bekor qilish",
+    "delete": "O'chirish",
+    "edit": "Tahrirlash",
+    "add": "Qo'shish",
+    "remove": "Olib tashlash",
+    "clear": "Tozalash",
+    "filter": "Filtr",
+    "sort": "Saralash",
+    "price": "Narx",
+    "rating": "Reyting",
+    "newest": "Yangi",
+    "featured": "Tavsiya etilgan",
+    "viewAll": "Barchasini ko'rish",
+    "learnMore": "Ko'proq o'rganish",
+    "shopNow": "Hoziroq xarid qilish",
+    "subscribe": "Obuna bo'lish",
+    "email": "Elektron pochta",
+    "phone": "Telefon",
+    "address": "Manzil"
+  },
+  "navigation": {
+    "home": "Bosh sahifa",
+    "shop": "Do'kon",
+    "about": "Biz haqimizda",
+    "contact": "Aloqa",
+    "login": "Kirish",
+    "signup": "Ro'yxatdan o'tish",
+    "logout": "Chiqish",
+    "myOrders": "Mening buyurtmalarim",
+    "cart": "Savatcha"
+  },
+  "home": {
+    "hero": {
+      "title": "Har qanday holat uchun premium sharf",
+      "subtitle": "Bizning tanlangan hashamatli sharf, shal va o'rashlar to'plamini kashf eting. Ipaksimon nafosatdan kashmir issiqligigacha - o'zingizga mos stilni toping.",
+      "shopNow": "Hoziroq xarid qilish",
+      "learnMore": "Ko'proq o'rganish"
+    },
+    "features": {
+      "freeShipping": {
+        "title": "Bepul yetkazib berish",
+        "description": "$100 dan ortiq buyurtmalar uchun bepul yetkazib berish"
+      },
+      "qualityGuarantee": {
+        "title": "Sifat kafolati",
+        "description": "Premium materiallar va hunarmandchilik"
+      },
+      "easyReturns": {
+        "title": "Oson qaytarish",
+        "description": "30 kunlik qaytarish siyosati"
+      }
+    },
+    "featuredProducts": {
+      "title": "Tavsiya etilgan mahsulotlar",
+      "subtitle": "Bizning to'plamimizdan tanlangan sevimlilar"
+    },
+    "testimonials": {
+      "title": "Mijozlarimiz nima deydi",
+      "subtitle": "Mamnun mijozlardan haqiqiy sharhlar",
+      "reviews": [
+        {
+          "text": "Ipak sharf juda chiroyli! Sifat ajoyib va tez yetib keldi.",
+          "author": "Sara Jonson"
+        },
+        {
+          "text": "Kashmir o'rashimni yaxshi ko'raman. Juda yumshoq va issiq, qish kechalari uchun mukammal.",
+          "author": "Maykl Chen"
+        },
+        {
+          "text": "Ajoyib mijozlar xizmati va mahsulot kutilganidan ham yaxshi chiqdi. Albatta yana buyurtma beraman!",
+          "author": "Emili Devis"
+        }
+      ]
+    },
+    "newsletter": {
+      "title": "Yangiliklar bilan tanishib turing",
+      "subtitle": "Eksklyuziv takliflar va yangi kelgan mahsulotlar uchun bizning xabarnomamizga obuna bo'ling",
+      "placeholder": "Elektron pochtangizni kiriting",
+      "subscribe": "Obuna bo'lish"
+    }
+  },
+  "shop": {
+    "title": "Sharf do'koni",
+    "subtitle": "Bizning premium sharf, shal va o'rashlar to'plamini kashf eting",
+    "searchPlaceholder": "Sharf qidirish...",
+    "filters": "Filtrlar",
+    "sortBy": "Saralash",
+    "sortOptions": {
+      "featured": "Tavsiya etilgan",
+      "priceLow": "Narx: pastdan yuqoriga",
+      "priceHigh": "Narx: yuqoridan pastga",
+      "rating": "Eng yuqori reytingli",
+      "newest": "Yangi"
+    },
+    "results": "{{total}} ta mahsulotdan {{count}} tasi ko'rsatilmoqda",
+    "noResults": {
+      "title": "Mahsulot topilmadi",
+      "subtitle": "Qidiruv yoki filtr mezonlarini o'zgartirishga harakat qiling",
+      "clearFilters": "Filtrlarni tozalash"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "Scarfes haqida",
+      "subtitle": "Biz butun dunyodan eng yaxshi sharf, shal va o'rashlar to'plamini sizga olib kelishga ishtiyoq bilan qiziqamiz. Bizning missiyamiz - premium sifatli aksessuarlar bilan o'z noyob stilingizni ifoda etishga yordam berish."
+    },
+    "story": {
+      "title": "Bizning hikoyamiz",
+      "content": [
+        "2020 yilda tashkil etilgan Scarfes oddiy missiya bilan kichik ehtiros loyihasi sifatida boshlandi: dunyodagi eng chiroyli va yuqori sifatli sharflarni tanlash. Shaxsiy to'plam sifatida boshlangan narsa butun dunyo bo'ylab sharf ishqibozlari uchun ishonchli manzilga aylandi.",
+        "Biz mashhur to'qimachilik mintaqalaridan to'g'ridan-to'g'ri hunarmandlar va ishlab chiqaruvchilar bilan ishlaymiz, bizning to'plamimizdagi har bir buyumning sifat, hunarmandchilik va axloqiy ishlab chiqarish bo'yicha qat'iy standartlarimizga javob berishini ta'minlaymiz.",
+        "Bugun biz an'anaviy hunarmandchilik va zamonaviy dizaynni nishonlaydigan, mijozlarimizga abadiy uslub orqali o'zlarining individualini ifoda etishga yordam beradigan diqqat bilan tanlangan sharf to'plamini taklif qilishdan faxrlanamiz."
+      ]
+    },
+    "values": {
+      "title": "Bizning qadriyatlarimiz",
+      "subtitle": "Biz qiladigan barcha ishlarni boshqaradigan tamoyillar",
+      "qualityFirst": {
+        "title": "Sifat birinchi o'rinda",
+        "description": "Biz hech qachon sifatdan voz kechmaymiz. Har bir sharf materiallar, hunarmandchilik va chidamlilik bo'yicha diqqat bilan tanlanadi."
+      },
+      "ethicalSourcing": {
+        "title": "Axloqiy manba",
+        "description": "Biz adolatli mehnat amaliyotlari va barqaror ishlab chiqarish usullariga sodiqligimizni baham ko'radigan yetkazib beruvchilar bilan hamkorlik qilamiz."
+      },
+      "customerFocus": {
+        "title": "Mijozlarga e'tibor",
+        "description": "Bizning mijozlarimiz biz qiladigan barcha ishlarning markazida. Biz ajoyib xizmat va qo'llab-quvvatlashni taqdim etishga sodiqmiz."
+      },
+      "globalInspiration": {
+        "title": "Global ilhom",
+        "description": "Biz butun dunyo madaniyatlaridan ilhom olamiz, sizga noyob dizaynlar va an'anaviy texnikalarni olib kelamiz."
+      }
+    },
+    "team": {
+      "title": "Bizning jamoamiz bilan tanishib turing",
+      "subtitle": "Scarfes ortidagi ehtirosli odamlar",
+      "members": [
+        {
+          "name": "Sara Jonson",
+          "role": "Asoschisi va bosh direktor",
+          "bio": "Sara Scarfesni hashamatli sharflarni hamma uchun qulay qilish viziyasi bilan tashkil etdi."
+        },
+        {
+          "name": "Maykl Chen",
+          "role": "Tanlash bo'yicha rahbar",
+          "bio": "Maykl to'qimachilik manbalari va dizayn sohasida 15 yillik tajribani olib keladi."
+        },
+        {
+          "name": "Emili Devis",
+          "role": "Mijozlar tajribasi",
+          "bio": "Emili har bir mijozning bizning brendimiz bilan ajoyib tajribaga ega bo'lishini ta'minlaydi."
+        }
+      ]
+    },
+    "contact": {
+      "title": "Biz bilan bog'laning",
+      "subtitle": "Bizning mahsulotlarimiz haqida savollar yoki uslub bo'yicha maslahat kerakmi? Sizdan eshitishni xohlaymiz.",
+      "emailUs": "Bizga yozing",
+      "callUs": "Bizga qo'ng'iroq qiling"
+    }
+  },
+  "footer": {
+    "description": "Bizning premium sharf, shal va o'rashlar to'plamini kashf eting. Sifatli hunarmandchilik abadiy uslub bilan uchrashadi.",
+    "quickLinks": "Tezkor havolalar",
+    "customerService": "Mijozlar xizmati",
+    "contactUs": "Biz bilan bog'laning",
+    "shippingInfo": "Yetkazib berish haqida ma'lumot",
+    "returnsExchanges": "Qaytarish va almashtirish",
+    "sizeGuide": "O'lcham bo'yicha qo'llanma",
+    "faq": "Tez-tez so'raladigan savollar",
+    "privacyPolicy": "Maxfiylik siyosati",
+    "termsOfService": "Xizmat ko'rsatish shartlari",
+    "copyright": "© 2024 Scarfes. Barcha huquqlar himoyalangan."
+  },
+  "product": {
+    "addToCart": "Savatchaga qo'shish",
+    "outOfStock": "Qolmagan",
+    "inStock": "Mavjud",
+    "description": "Tavsif",
+    "specifications": "Texnik xususiyatlar",
+    "reviews": "Sharhlar",
+    "relatedProducts": "O'xshash mahsulotlar",
+    "size": "O'lcham",
+    "color": "Rang",
+    "material": "Material",
+    "care": "Parvarish qilish bo'yicha ko'rsatmalar"
+  },
+  "cart": {
+    "title": "Xarid savatchasi",
+    "empty": "Savatchangiz bo'sh",
+    "subtotal": "Yarim jami",
+    "shipping": "Yetkazib berish",
+    "tax": "Soliq",
+    "total": "Jami",
+    "checkout": "Buyurtmani rasmiylashtirish",
+    "continueShopping": "Xaridni davom ettirish",
+    "removeItem": "Mahsulotni olib tashlash",
+    "updateQuantity": "Miqdorni yangilash"
+  },
+  "auth": {
+    "login": {
+      "title": "Kirish",
+      "email": "Elektron pochta",
+      "password": "Parol",
+      "rememberMe": "Meni eslab qol",
+      "forgotPassword": "Parolni unutdingizmi?",
+      "noAccount": "Hisobingiz yo'qmi?",
+      "signUp": "Ro'yxatdan o'ting"
+    },
+    "signup": {
+      "title": "Ro'yxatdan o'tish",
+      "firstName": "Ism",
+      "lastName": "Familiya",
+      "email": "Elektron pochta",
+      "password": "Parol",
+      "confirmPassword": "Parolni tasdiqlang",
+      "agreeTerms": "Men Xizmat ko'rsatish shartlari va Maxfiylik siyosatiga roziman",
+      "haveAccount": "Hisobingiz bormi?",
+      "login": "Kirish"
+    }
+  }
+}

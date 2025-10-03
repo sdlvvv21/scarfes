@@ -1,0 +1,241 @@
+{
+  "common": {
+    "home": "Home",
+    "shop": "Shop",
+    "about": "About",
+    "contact": "Contact",
+    "login": "Login",
+    "signup": "Sign Up",
+    "logout": "Logout",
+    "search": "Search",
+    "cart": "Cart",
+    "orders": "My Orders",
+    "menu": "Menu",
+    "close": "Close",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "remove": "Remove",
+    "clear": "Clear",
+    "filter": "Filter",
+    "sort": "Sort",
+    "price": "Price",
+    "rating": "Rating",
+    "newest": "Newest",
+    "featured": "Featured",
+    "viewAll": "View All",
+    "learnMore": "Learn More",
+    "shopNow": "Shop Now",
+    "subscribe": "Subscribe",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Address"
+  },
+  "navigation": {
+    "home": "Home",
+    "shop": "Shop",
+    "about": "About",
+    "contact": "Contact",
+    "login": "Login",
+    "signup": "Sign Up",
+    "logout": "Logout",
+    "myOrders": "My Orders",
+    "cart": "Cart"
+  },
+  "home": {
+    "hero": {
+      "title": "Premium Scarves for Every Occasion",
+      "subtitle": "Discover our curated collection of luxury scarves, shawls, and wraps. From silk elegance to cashmere warmth, find your perfect style.",
+      "shopNow": "Shop Now",
+      "learnMore": "Learn More"
+    },
+    "features": {
+      "freeShipping": {
+        "title": "Free Shipping",
+        "description": "Free shipping on orders over $100"
+      },
+      "qualityGuarantee": {
+        "title": "Quality Guarantee",
+        "description": "Premium materials and craftsmanship"
+      },
+      "easyReturns": {
+        "title": "Easy Returns",
+        "description": "30-day return policy"
+      }
+    },
+    "featuredProducts": {
+      "title": "Featured Products",
+      "subtitle": "Handpicked favorites from our collection"
+    },
+    "testimonials": {
+      "title": "What Our Customers Say",
+      "subtitle": "Real reviews from satisfied customers",
+      "reviews": [
+        {
+          "text": "The silk scarf is absolutely beautiful! The quality is exceptional and it arrived quickly.",
+          "author": "Sarah Johnson"
+        },
+        {
+          "text": "Love my cashmere wrap. It's so soft and warm, perfect for winter evenings.",
+          "author": "Michael Chen"
+        },
+        {
+          "text": "Great customer service and the product exceeded my expectations. Will definitely order again!",
+          "author": "Emily Davis"
+        }
+      ]
+    },
+    "newsletter": {
+      "title": "Stay Updated",
+      "subtitle": "Subscribe to our newsletter for exclusive offers and new arrivals",
+      "placeholder": "Enter your email",
+      "subscribe": "Subscribe"
+    }
+  },
+  "shop": {
+    "title": "Shop Scarves",
+    "subtitle": "Discover our premium collection of scarves, shawls, and wraps",
+    "searchPlaceholder": "Search scarves...",
+    "filters": "Filters",
+    "sortBy": "Sort by",
+    "sortOptions": {
+      "featured": "Featured",
+      "priceLow": "Price: Low to High",
+      "priceHigh": "Price: High to Low",
+      "rating": "Highest Rated",
+      "newest": "Newest"
+    },
+    "results": "Showing {{count}} of {{total}} products",
+    "noResults": {
+      "title": "No products found",
+      "subtitle": "Try adjusting your search or filter criteria",
+      "clearFilters": "Clear Filters"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "About Scarfes",
+      "subtitle": "We are passionate about bringing you the finest collection of scarves, shawls, and wraps from around the world. Our mission is to help you express your unique style with premium quality accessories."
+    },
+    "story": {
+      "title": "Our Story",
+      "content": [
+        "Founded in 2020, Scarfes began as a small passion project with a simple mission: to curate the world's most beautiful and high-quality scarves. What started as a personal collection has grown into a trusted destination for scarf enthusiasts worldwide.",
+        "We work directly with artisans and manufacturers from renowned textile regions, ensuring that every piece in our collection meets our strict standards for quality, craftsmanship, and ethical production.",
+        "Today, we're proud to offer a carefully curated selection of scarves that celebrate both traditional craftsmanship and contemporary design, helping our customers express their individuality through timeless style."
+      ]
+    },
+    "values": {
+      "title": "Our Values",
+      "subtitle": "The principles that guide everything we do",
+      "qualityFirst": {
+        "title": "Quality First",
+        "description": "We never compromise on quality. Every scarf is carefully selected for its materials, craftsmanship, and durability."
+      },
+      "ethicalSourcing": {
+        "title": "Ethical Sourcing",
+        "description": "We partner with suppliers who share our commitment to fair labor practices and sustainable production methods."
+      },
+      "customerFocus": {
+        "title": "Customer Focus",
+        "description": "Our customers are at the heart of everything we do. We're committed to providing exceptional service and support."
+      },
+      "globalInspiration": {
+        "title": "Global Inspiration",
+        "description": "We draw inspiration from cultures around the world, bringing you unique designs and traditional techniques."
+      }
+    },
+    "team": {
+      "title": "Meet Our Team",
+      "subtitle": "The passionate people behind Scarfes",
+      "members": [
+        {
+          "name": "Sarah Johnson",
+          "role": "Founder & CEO",
+          "bio": "Sarah founded Scarfes with a vision to make luxury scarves accessible to everyone."
+        },
+        {
+          "name": "Michael Chen",
+          "role": "Head of Curation",
+          "bio": "Michael brings 15 years of experience in textile sourcing and design."
+        },
+        {
+          "name": "Emily Davis",
+          "role": "Customer Experience",
+          "bio": "Emily ensures every customer has an exceptional experience with our brand."
+        }
+      ]
+    },
+    "contact": {
+      "title": "Get in Touch",
+      "subtitle": "Have questions about our products or need styling advice? We'd love to hear from you.",
+      "emailUs": "Email Us",
+      "callUs": "Call Us"
+    }
+  },
+  "footer": {
+    "description": "Discover our premium collection of scarves, shawls, and wraps. Quality craftsmanship meets timeless style.",
+    "quickLinks": "Quick Links",
+    "customerService": "Customer Service",
+    "contactUs": "Contact Us",
+    "shippingInfo": "Shipping Info",
+    "returnsExchanges": "Returns & Exchanges",
+    "sizeGuide": "Size Guide",
+    "faq": "FAQ",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "copyright": "© 2024 Scarfes. All rights reserved."
+  },
+  "product": {
+    "addToCart": "Add to Cart",
+    "outOfStock": "Out of Stock",
+    "inStock": "In Stock",
+    "description": "Description",
+    "specifications": "Specifications",
+    "reviews": "Reviews",
+    "relatedProducts": "Related Products",
+    "size": "Size",
+    "color": "Color",
+    "material": "Material",
+    "care": "Care Instructions"
+  },
+  "cart": {
+    "title": "Shopping Cart",
+    "empty": "Your cart is empty",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "tax": "Tax",
+    "total": "Total",
+    "checkout": "Checkout",
+    "continueShopping": "Continue Shopping",
+    "removeItem": "Remove item",
+    "updateQuantity": "Update quantity"
+  },
+  "auth": {
+    "login": {
+      "title": "Login",
+      "email": "Email",
+      "password": "Password",
+      "rememberMe": "Remember me",
+      "forgotPassword": "Forgot password?",
+      "noAccount": "Don't have an account?",
+      "signUp": "Sign up"
+    },
+    "signup": {
+      "title": "Sign Up",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "agreeTerms": "I agree to the Terms of Service and Privacy Policy",
+      "haveAccount": "Already have an account?",
+      "login": "Login"
+    }
+  }
+}

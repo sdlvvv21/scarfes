@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { ShoppingCart, User, Menu, X, Search } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { useCart } from '../contexts/CartContext';
 import { useAuth } from '../contexts/AuthContext';
 import SearchBar from './SearchBar';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const { getTotalItems } = useCart();
   const { isAuthenticated, user, logout } = useAuth();
+  const { t } = useTranslation();
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -29,21 +32,24 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <Link to="/" className="text-gray-700 hover:text-primary-800 transition-colors duration-200">
-              Home
+              {t('navigation.home')}
             </Link>
             <Link to="/shop" className="text-gray-700 hover:text-primary-800 transition-colors duration-200">
-              Shop
+              {t('navigation.shop')}
             </Link>
             <Link to="/about" className="text-gray-700 hover:text-primary-800 transition-colors duration-200">
-              About
+              {t('navigation.about')}
             </Link>
             <Link to="/contact" className="text-gray-700 hover:text-primary-800 transition-colors duration-200">
-              Contact 
+              {t('navigation.contact')}
             </Link>
           </div>
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center space-x-4">
+            {/* Language Switcher */}
+            <LanguageSwitcher />
+
             {/* Search */}
             <button
               onClick={() => setIsSearchOpen(!isSearchOpen)}
@@ -77,13 +83,13 @@ const Navbar = () => {
                     to="/orders"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"
                   >
-                    My Orders
+                    {t('navigation.myOrders')}
                   </Link>
                   <button
                     onClick={handleLogout}
                     className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"
                   >
-                    Logout
+                    {t('navigation.logout')}
                   </button>
                 </div>
               </div>
@@ -93,13 +99,13 @@ const Navbar = () => {
                   to="/login"
                   className="text-gray-700 hover:text-primary-800 transition-colors duration-200"
                 >
-                  Login
+                  {t('navigation.login')}
                 </Link>
                 <Link
                   to="/signup"
                   className="bg-primary-800 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors duration-200"
                 >
-                  Sign Up
+                  {t('navigation.signup')}
                 </Link>
               </div>
             )}
@@ -107,6 +113,7 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center space-x-2">
+            <LanguageSwitcher />
             <button
               onClick={() => setIsSearchOpen(!isSearchOpen)}
               className="p-2 text-gray-700 hover:text-primary-800 transition-colors duration-200"
@@ -156,7 +163,7 @@ const Navbar = () => {
             aria-modal="true"
           >
             <div className="p-4 border-b border-gray-200 flex items-center justify-between">
-              <span className="text-lg font-semibold">Menu</span>
+              <span className="text-lg font-semibold">{t('common.menu')}</span>
               <button
                 onClick={() => setIsMenuOpen(false)}
                 className="p-2 text-gray-700 hover:text-primary-800 transition-colors duration-200"
@@ -166,18 +173,18 @@ const Navbar = () => {
               </button>
             </div>
             <div className="p-4 flex flex-col space-y-4">
-              <Link to="/" className="text-gray-700 hover:text-primary-800 transition-colors duration-200" onClick={() => setIsMenuOpen(false)}>Home</Link>
-              <Link to="/shop" className="text-gray-700 hover:text-primary-800 transition-colors duration-200" onClick={() => setIsMenuOpen(false)}>Shop</Link>
-              <Link to="/about" className="text-gray-700 hover:text-primary-800 transition-colors duration-200" onClick={() => setIsMenuOpen(false)}>About</Link>
+              <Link to="/" className="text-gray-700 hover:text-primary-800 transition-colors duration-200" onClick={() => setIsMenuOpen(false)}>{t('navigation.home')}</Link>
+              <Link to="/shop" className="text-gray-700 hover:text-primary-800 transition-colors duration-200" onClick={() => setIsMenuOpen(false)}>{t('navigation.shop')}</Link>
+              <Link to="/about" className="text-gray-700 hover:text-primary-800 transition-colors duration-200" onClick={() => setIsMenuOpen(false)}>{t('navigation.about')}</Link>
               {isAuthenticated ? (
                 <>
-                  <Link to="/orders" className="text-gray-700 hover:text-primary-800 transition-colors duration-200" onClick={() => setIsMenuOpen(false)}>My Orders</Link>
-                  <button onClick={() => { handleLogout(); setIsMenuOpen(false); }} className="text-left text-gray-700 hover:text-primary-800 transition-colors duration-200">Logout</button>
+                  <Link to="/orders" className="text-gray-700 hover:text-primary-800 transition-colors duration-200" onClick={() => setIsMenuOpen(false)}>{t('navigation.myOrders')}</Link>
+                  <button onClick={() => { handleLogout(); setIsMenuOpen(false); }} className="text-left text-gray-700 hover:text-primary-800 transition-colors duration-200">{t('navigation.logout')}</button>
                 </>
               ) : (
                 <>
-                  <Link to="/login" className="text-gray-700 hover:text-primary-800 transition-colors duration-200" onClick={() => setIsMenuOpen(false)}>Login</Link>
-                  <Link to="/signup" className="bg-primary-800 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors duration-200" onClick={() => setIsMenuOpen(false)}>Sign Up</Link>
+                  <Link to="/login" className="text-gray-700 hover:text-primary-800 transition-colors duration-200" onClick={() => setIsMenuOpen(false)}>{t('navigation.login')}</Link>
+                  <Link to="/signup" className="bg-primary-800 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors duration-200" onClick={() => setIsMenuOpen(false)}>{t('navigation.signup')}</Link>
                 </>
               )}
             </div>
