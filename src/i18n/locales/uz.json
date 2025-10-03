@@ -68,6 +68,20 @@
         "description": "30 kunlik qaytarish siyosati"
       }
     },
+    "ageGroups": {
+      "youth": {
+        "title": "Yoshlar uchun",
+        "description": "Zamonaviy va erkin uslublar o‘z individualligingizni ko‘rsatish uchun."
+      },
+      "middle": {
+        "title": "O‘rta yoshdagilar uchun",
+        "description": "Klassik va nafis variantlar — ishda ham, kundalik hayotda ham mos keladi."
+      },
+      "older": {
+        "title": "Katta yoshdagilar uchun",
+        "description": "Sifatli va qulay sharf — abadiy uslub va qulaylik uchun."
+      }
+    },
     "featuredProducts": {
       "title": "Tavsiya etilgan mahsulotlar",
       "subtitle": "Bizning to'plamimizdan tanlangan sevimlilar"
