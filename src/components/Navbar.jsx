@@ -142,10 +142,10 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Search */}
+        {/* Search Drawer (all sizes) */}
         {isSearchOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200">
-            <SearchBar />
+          <div className="py-4 border-t border-gray-200">
+            <SearchBar placeholder={t('shop.searchPlaceholder')} />
           </div>
         )}
 

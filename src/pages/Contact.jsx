@@ -41,7 +41,10 @@ export default function Contact() {
 
   const validate = () => {
     const newErrors = {};
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+    // email: restrict characters and validate basic format
+    const emailSafe = email.replace(/[^a-zA-Z0-9._%+-@]/g, '');
+    if (emailSafe !== email) setEmail(emailSafe);
+    const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
     if (!emailRegex.test(email)) newErrors.email = 'Invalid email';
     // Expect full length: +998-00-000-00-00 => 1+3 + 4 separators + 2+3+2+2 = 1? Let's check length 17
     if (phone.length !== 17) newErrors.phone = 'Invalid phone';
@@ -75,7 +78,7 @@ export default function Contact() {
           type="email"
           placeholder={t('contact.emailPlaceholder')}
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={(e) => setEmail(e.target.value.replace(/[^a-zA-Z0-9._%+-@]/g, ''))}
           className={`w-full border rounded-lg p-3 ${errors.email ? 'border-red-400' : 'border-gray-300'}`}
           inputMode="email"
         />
