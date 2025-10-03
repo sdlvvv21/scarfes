@@ -53,8 +53,8 @@ const Home = () => {
               <div className="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Sparkles className="w-8 h-8 text-primary-800" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">{t('home.features.freeShipping.title')}</h3>
-              <p className="text-gray-600">{t('home.features.freeShipping.description')}</p>
+              <h3 className="text-xl font-semibold mb-2">{t('home.ageGroups.youth.title')}</h3>
+              <p className="text-gray-600">{t('home.ageGroups.youth.description')}</p>
             </div>
 
             {/* Middle-aged Women */}
@@ -62,8 +62,8 @@ const Home = () => {
               <div className="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Feather className="w-8 h-8 text-primary-800" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">{t('home.features.qualityGuarantee.title')}</h3>
-              <p className="text-gray-600">{t('home.features.qualityGuarantee.description')}</p>
+              <h3 className="text-xl font-semibold mb-2">{t('home.ageGroups.middle.title')}</h3>
+              <p className="text-gray-600">{t('home.ageGroups.middle.description')}</p>
             </div>
 
             {/* Older Generation */}
@@ -71,8 +71,8 @@ const Home = () => {
               <div className="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Heart className="w-8 h-8 text-primary-800" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">{t('home.features.easyReturns.title')}</h3>
-              <p className="text-gray-600">{t('home.features.easyReturns.description')}</p>
+              <h3 className="text-xl font-semibold mb-2">{t('home.ageGroups.older.title')}</h3>
+              <p className="text-gray-600">{t('home.ageGroups.older.description')}</p>
             </div>
 
           </div>
