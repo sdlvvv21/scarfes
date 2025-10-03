@@ -49,23 +49,23 @@
   },
   "home": {
     "hero": {
-      "title": "Premium Scarves for Every Generation",
-      "subtitle": "From trendy looks for youth to timeless elegance for the older generation — discover scarves that match your style and age.",
+      "title": "Premium Scarves for Every Occasion",
+      "subtitle": "Discover our curated collection of luxury scarves, shawls, and wraps. From silk elegance to cashmere warmth, find your perfect style.",
       "shopNow": "Shop Now",
       "learnMore": "Learn More"
     },
-    "features": {
+    "ageGroups": {
       "youth": {
         "title": "Youth",
-        "description": "Trendy and stylish designs that let young customers express themselves with bold colors and patterns."
+        "description": "Trendy, stylish, expressive, perfect for fashion-forward customers."
       },
-      "middleAged": {
+      "middle": {
         "title": "Middle-aged",
-        "description": "Elegant and versatile scarves that balance modern fashion with everyday practicality."
+        "description": "Elegant, versatile, balancing modern style with practicality."
       },
       "older": {
         "title": "Older Generation",
-        "description": "Classic and timeless comfort, with warm textures and sophisticated styles that never go out of fashion."
+        "description": "Timeless, classic, comfortable, highlighting sophistication."
       }
     },
     "featuredProducts": {
