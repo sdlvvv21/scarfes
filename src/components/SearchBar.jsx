@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
 import { Search, X } from 'lucide-react';
 import { useSearch } from '../contexts/SearchContext';
+import { useNavigate } from 'react-router-dom';
 
 const SearchBar = ({ placeholder = "Search scarves...", className = "" }) => {
   const [localQuery, setLocalQuery] = useState('');
   const { query, setSearchQuery, clearSearch } = useSearch();
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setSearchQuery(localQuery);
+    navigate('/shop');
   };
 
   const handleClear = () => {
