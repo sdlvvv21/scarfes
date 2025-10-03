@@ -38,7 +38,7 @@ const Navbar = () => {
               About
             </Link>
             <Link to="/contact" className="text-gray-700 hover:text-primary-800 transition-colors duration-200">
-              Contact 
+              Contact
             </Link>
           </div>
 
@@ -166,18 +166,19 @@ const Navbar = () => {
               </button>
             </div>
             <div className="p-4 flex flex-col space-y-4">
-              <Link to="/" className="text-gray-700 hover:text-primary-800 transition-colors duration-200" onClick={() => setIsMenuOpen(false)}>Home</Link>
-              <Link to="/shop" className="text-gray-700 hover:text-primary-800 transition-colors duration-200" onClick={() => setIsMenuOpen(false)}>Shop</Link>
-              <Link to="/about" className="text-gray-700 hover:text-primary-800 transition-colors duration-200" onClick={() => setIsMenuOpen(false)}>About</Link>
+              <Link to="/" onClick={() => setIsMenuOpen(false)} className="text-gray-700 hover:text-primary-800 transition-colors duration-200">Home</Link>
+              <Link to="/shop" onClick={() => setIsMenuOpen(false)} className="text-gray-700 hover:text-primary-800 transition-colors duration-200">Shop</Link>
+              <Link to="/about" onClick={() => setIsMenuOpen(false)} className="text-gray-700 hover:text-primary-800 transition-colors duration-200">About</Link>
+              <Link to="/contact" onClick={() => setIsMenuOpen(false)} className="text-gray-700 hover:text-primary-800 transition-colors duration-200">Contact</Link>
               {isAuthenticated ? (
                 <>
-                  <Link to="/orders" className="text-gray-700 hover:text-primary-800 transition-colors duration-200" onClick={() => setIsMenuOpen(false)}>My Orders</Link>
+                  <Link to="/orders" onClick={() => setIsMenuOpen(false)} className="text-gray-700 hover:text-primary-800 transition-colors duration-200">My Orders</Link>
                   <button onClick={() => { handleLogout(); setIsMenuOpen(false); }} className="text-left text-gray-700 hover:text-primary-800 transition-colors duration-200">Logout</button>
                 </>
               ) : (
                 <>
-                  <Link to="/login" className="text-gray-700 hover:text-primary-800 transition-colors duration-200" onClick={() => setIsMenuOpen(false)}>Login</Link>
-                  <Link to="/signup" className="bg-primary-800 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors duration-200" onClick={() => setIsMenuOpen(false)}>Sign Up</Link>
+                  <Link to="/login" onClick={() => setIsMenuOpen(false)} className="text-gray-700 hover:text-primary-800 transition-colors duration-200">Login</Link>
+                  <Link to="/signup" onClick={() => setIsMenuOpen(false)} className="bg-primary-800 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors duration-200">Sign Up</Link>
                 </>
               )}
             </div>
@@ -189,5 +190,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
