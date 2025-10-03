@@ -191,6 +191,15 @@
     "termsOfService": "Terms of Service",
     "copyright": "© 2024 Scarfes. All rights reserved."
   },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Got questions about our scarves? Reach out and we’ll get back to you.",
+    "namePlaceholder": "Your Name",
+    "emailPlaceholder": "Your Email",
+    "phonePlaceholder": "Your Phone",
+    "messagePlaceholder": "Your Message",
+    "sendMessage": "Send Message"
+  },
   "product": {
     "addToCart": "Add to Cart",
     "outOfStock": "Out of Stock",
@@ -239,3 +248,4 @@
     }
   }
 }
+

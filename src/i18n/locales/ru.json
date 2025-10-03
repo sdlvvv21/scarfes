@@ -205,6 +205,15 @@
     "termsOfService": "Условия использования",
     "copyright": "© 2024 Scarfes. Все права защищены."
   },
+  "contact": {
+    "title": "Свяжитесь с нами",
+    "subtitle": "Есть вопросы о наших шарфах? Напишите нам, и мы ответим.",
+    "namePlaceholder": "Ваше имя",
+    "emailPlaceholder": "Ваш email",
+    "phonePlaceholder": "Ваш телефон",
+    "messagePlaceholder": "Ваше сообщение",
+    "sendMessage": "Отправить сообщение"
+  },
   "product": {
     "addToCart": "Добавить в корзину",
     "outOfStock": "Нет в наличии",
@@ -253,3 +262,4 @@
     }
   }
 }
+

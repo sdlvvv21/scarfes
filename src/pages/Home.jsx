@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import PageTransition from '../components/PageTransition';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Star, Sparkles, Feather, Heart } from 'lucide-react';
+import { ArrowRight, Star } from 'lucide-react';
 import ProductCard from '../components/ProductCard';
 import { products } from '../data/products';
 
@@ -43,41 +43,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Age Group Highlights */}
-      <section className="py-16 bg-gray-50" data-aos="fade-up">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            
-            {/* Youth */}
-            <div className="text-center">
-              <div className="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Sparkles className="w-8 h-8 text-primary-800" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">{t('home.ageGroups.youth.title')}</h3>
-              <p className="text-gray-600">{t('home.ageGroups.youth.description')}</p>
-            </div>
-
-            {/* Middle-aged Women */}
-            <div className="text-center">
-              <div className="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Feather className="w-8 h-8 text-primary-800" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">{t('home.ageGroups.middle.title')}</h3>
-              <p className="text-gray-600">{t('home.ageGroups.middle.description')}</p>
-            </div>
-
-            {/* Older Generation */}
-            <div className="text-center">
-              <div className="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Heart className="w-8 h-8 text-primary-800" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">{t('home.ageGroups.older.title')}</h3>
-              <p className="text-gray-600">{t('home.ageGroups.older.description')}</p>
-            </div>
-
-          </div>
-        </div>
-      </section>
+      
 
       {/* Featured Products */}
       <section className="py-16">

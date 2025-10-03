@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom';
 import { Heart, ShoppingCart } from 'lucide-react';
 import { useCart } from '../contexts/CartContext';
 import { formatPrice, calculateDiscount } from '../utils/helpers';
+import { useTranslation } from 'react-i18next';
 
 const ProductCard = ({ product, showAddToCart = true }) => {
   const { addToCart } = useCart();
+  const { t } = useTranslation();
   const discount = product.originalPrice ? calculateDiscount(product.originalPrice, product.price) : 0;
 
   const handleAddToCart = (e) => {
@@ -15,7 +17,7 @@ const ProductCard = ({ product, showAddToCart = true }) => {
   };
 
   return (
-    <Link to={`/product/${product.id}`} className="product-card group rounded-xl overflow-hidden" data-aos="fade-up">
+    <Link to={`/product/${product.id}`} className="product-card group rounded-xl overflow-hidden flex flex-col h-full" data-aos="fade-up">
       <div className="relative overflow-hidden">
         <img
           src={product.image}
@@ -32,7 +34,7 @@ const ProductCard = ({ product, showAddToCart = true }) => {
         </button>
       </div>
       
-      <div className="p-5">
+      <div className="p-5 flex flex-col flex-1">
         <h3 className="font-bold text-gray-900 mb-2 line-clamp-2 font-heading text-lg">{product.name}</h3>
         
         <div className="flex items-center gap-2 mb-2">
@@ -62,13 +64,15 @@ const ProductCard = ({ product, showAddToCart = true }) => {
         </div>
         
         {showAddToCart && (
-          <button
-            onClick={handleAddToCart}
-            className="w-full flex items-center justify-center gap-2 bg-primary-800 text-white py-2.5 px-4 rounded-lg hover:bg-primary-700 transition-colors duration-200"
-          >
-            <ShoppingCart className="w-4 h-4" />
-            Add to Cart
-          </button>
+          <div className="mt-auto">
+            <button
+              onClick={handleAddToCart}
+              className="w-full flex items-center justify-center gap-2 bg-primary-800 text-white py-2.5 px-4 rounded-lg hover:bg-primary-700 transition-colors duration-200"
+            >
+              <ShoppingCart className="w-4 h-4" />
+              {t('product.addToCart')}
+            </button>
+          </div>
         )}
       </div>
     </Link>

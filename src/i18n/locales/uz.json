@@ -205,6 +205,15 @@
     "termsOfService": "Xizmat ko'rsatish shartlari",
     "copyright": "© 2024 Scarfes. Barcha huquqlar himoyalangan."
   },
+  "contact": {
+    "title": "Biz bilan bog'laning",
+    "subtitle": "Sharflarimiz haqida savollaringiz bormi? Biz bilan bog'laning va tez orada javob beramiz.",
+    "namePlaceholder": "Ismingiz",
+    "emailPlaceholder": "Elektron pochtangiz",
+    "phonePlaceholder": "Telefon raqamingiz",
+    "messagePlaceholder": "Xabaringiz",
+    "sendMessage": "Xabar yuborish"
+  },
   "product": {
     "addToCart": "Savatchaga qo'shish",
     "outOfStock": "Qolmagan",
@@ -253,3 +262,4 @@
     }
   }
 }
+
