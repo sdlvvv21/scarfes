@@ -56,16 +56,16 @@
     },
     "features": {
       "freeShipping": {
-        "title": "Free Shipping",
-        "description": "Free shipping on orders over $100"
+        "title": "Young",
+        "description": "Trendy, stylish, expressive, perfect for fashion-forward customers."
       },
       "qualityGuarantee": {
-        "title": "Quality Guarantee",
-        "description": "Premium materials and craftsmanship"
+        "title": "Middle-aged",
+        "description": "Elegant, versatile, balancing modern style with practicality"
       },
       "easyReturns": {
-        "title": "Easy Returns",
-        "description": "30-day return policy"
+        "title": "Older",
+        "description": "Timeless, classic, comfortable, highlighting sophistication."
       }
     },
     "featuredProducts": {
