@@ -37,6 +37,9 @@ const Navbar = () => {
             <Link to="/about" className="text-gray-700 hover:text-primary-800 transition-colors duration-200">
               About
             </Link>
+            <Link to="/contact" className="text-gray-700 hover:text-primary-800 transition-colors duration-200">
+              Contact 
+            </Link>
           </div>
 
           {/* Desktop Actions */}
