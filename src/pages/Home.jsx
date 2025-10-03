@@ -1,7 +1,7 @@
 import React from 'react';
 import PageTransition from '../components/PageTransition';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Star, Truck, Shield, RotateCcw } from 'lucide-react';
+import { ArrowRight, Star, Sparkles, Feather, Heart } from 'lucide-react';
 import ProductCard from '../components/ProductCard';
 import { products } from '../data/products';
 
@@ -15,16 +15,14 @@ const Home = () => {
         className="relative bg-cover bg-center bg-no-repeat min-h-[600px] flex items-center"
         style={{ backgroundImage: "url('/headscarf.jpg')" }}
       >
-        {/* Gradient overlay for readability */}
         <div className="absolute inset-0 bg-gradient-to-r from-primary-900/80 to-primary-600/40"></div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Premium Scarves for Every Occasion
+            Premium Scarves for Every Generation
           </h1>
           <p className="text-xl text-primary-100 mb-8 max-w-2xl">
-            Discover our curated collection of luxury scarves, shawls, and wraps. 
-            From silk elegance to cashmere warmth, find your perfect style.
+            From bold trends to timeless elegance — explore scarves designed for youth, women, and the older generation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
@@ -43,31 +41,38 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Age Group Highlights */}
       <section className="py-16 bg-gray-50" data-aos="fade-up">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            {/* Youth */}
             <div className="text-center">
               <div className="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Truck className="w-8 h-8 text-primary-800" />
+                <Sparkles className="w-8 h-8 text-primary-800" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Free Shipping</h3>
-              <p className="text-gray-600">Free shipping on orders over $100</p>
+              <h3 className="text-xl font-semibold mb-2">Youth</h3>
+              <p className="text-gray-600">Trendy, bold, and stylish scarves for the new generation.</p>
             </div>
+
+            {/* Middle-aged Women */}
             <div className="text-center">
               <div className="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-primary-800" />
+                <Feather className="w-8 h-8 text-primary-800" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Quality Guarantee</h3>
-              <p className="text-gray-600">Premium materials and craftsmanship</p>
+              <h3 className="text-xl font-semibold mb-2">Middle-Aged Women</h3>
+              <p className="text-gray-600">Elegant, versatile, and designed to match every occasion.</p>
             </div>
+
+            {/* Older Generation */}
             <div className="text-center">
               <div className="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <RotateCcw className="w-8 h-8 text-primary-800" />
+                <Heart className="w-8 h-8 text-primary-800" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Easy Returns</h3>
-              <p className="text-gray-600">30-day return policy</p>
+              <h3 className="text-xl font-semibold mb-2">Older Generation</h3>
+              <p className="text-gray-600">Classic, timeless comfort that never goes out of style.</p>
             </div>
+
           </div>
         </div>
       </section>
